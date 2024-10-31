@@ -1,0 +1,228 @@
+/* 所有連結文字沒底線*/
+a{
+    text-decoration: none;
+} 
+
+@font-face {
+    font-family: "ChenyuLuoYanThin";
+    src: url(chenyuluoyan_thin-main/ChenYuluoyan-Thin-Monospaced.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "ChenyuLuoYanThin", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #3A7CA5;
+}
+
+
+
+/* 背景顏色 */
+.bg1{
+    background-color: #ECF8F8;
+}
+
+/* header部分-------------------------------------------------------*/
+.a{
+    width: 1200px;
+    margin: auto;
+    /* flexbox */
+    display: flex;
+    align-items: center;
+    /* 水平分布 */
+    justify-content: space-around;
+    background-color: #ECF8F8;
+    padding: 50px;
+}
+/* 左側照片 */
+.sty0{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid #e2eded;
+    overflow: hidden; /* 隱藏超出框框範圍的照片 */
+}
+.profile-photo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 照片填滿框 */
+}
+/* 中間文字部分 */
+.text{
+    text-align: left;
+    color: #3A7CA5;
+    font-size: 30px;
+    line-height: 50px;
+}
+/* 右側按鈕部分 */
+nav{ 
+    text-align: center;
+    color: #3A7CA5;
+}
+/* 實線框框內部顏色白色 */
+.sty1{
+    width: 160px;
+    height: 100px;
+    border: 4px solid #e2eded;
+    border-radius: 50%;
+    margin: 20px 0;
+    font-size: 30px;
+    line-height: 100px;
+    background-color: #FFFFFF;
+    font-weight: bolder;
+}
+/* -------------------------------------------------------------------*/
+/* 區域名樣式 */
+.sty2{
+    padding: 30px 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    border-top: 7px solid #ecf4f3; /* 上框 */
+    border-bottom: 7px solid #ecf4f3; /* 下框 */
+    
+}
+/* 布局*/
+.b{
+    width: 1000px;
+    margin: auto;
+    align-items: center;
+    /* 水平分布 */
+    justify-content: space-around;
+    background-color: #ECF8F8;
+    padding: 50px;
+}
+
+/* 個人介紹區域---------------------------------------------------------- */
+/* 內框框兩個 */
+.sty3{
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    text-align: center; 
+}
+
+.sty4{
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    text-align: center; 
+    margin-top: 30px;
+}
+/* 框框樣式 */
+.box1{
+    width: 450px;
+    height: 80px;
+    border: 2.5px solid #e2eded;
+    border-radius: 15px;
+    background-color: #fff;
+    line-height: 80px;
+    font-size: 30px;
+}
+
+/* 專業技能程式能力區域---------------------------------------------------------- */
+/* 圓餅圖(運用助教課所教) */
+/* 設定外層容器 */
+.sklbar1{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: #edf2fb;
+    border-radius: 50%;
+}
+/* 使用conic-gradient來顯示進度 */
+.sklbar2{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fillProgress 2s ease forwards;
+}
+/* 中間圓形遮罩，用於創建內源和顯示百分比 */
+.sklbar2::after{
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.content{
+    position: absolute;
+    text-align: center;
+    z-index: 6;
+    color: #3A7CA5; /* 設置顏色以便於可見 */
+    font-size: 25px; 
+}
+/* circular */
+@keyframes fillProgress{
+    0%{
+        background: conic-gradient(#3A7CA5 0% 0%,#edf2fb 0% 100%);
+    }
+
+    100%{
+        background: conic-gradient(#3A7CA5 0% var(--progress),#edf2fb var(--progress) 100%);
+    }
+}
+
+/* 個人經歷區域---------------------------------------------------------- */
+.sty5{
+    display: flex;
+    /* 水平 */
+    justify-content: center;
+}
+
+.sty6{
+    width: 600px;
+    height: 400px;
+    border: 4px solid #e2eded;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.sty7{
+    width: 600px;
+    margin-left: 30px; 
+    word-wrap: break-word;
+    word-break: break-all; 
+    white-space: normal;
+    
+    line-height: 35px;
+    font-size: 23px;
+}
+
+
+.imgsty{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+/* 按鈕--------------------------------------------------------- */
+.back{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #afbedb;
+    line-height: 80px;
+    text-align: center;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    color: #fff;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.3);
+}
